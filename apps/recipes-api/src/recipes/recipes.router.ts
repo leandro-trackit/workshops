@@ -3,9 +3,9 @@ import { RecipesResponseDto } from '@whiskmate/shared';
 import { RECIPES_REPOSITORY_TOKEN } from './recipes.repository';
 import { inject } from '../di';
 
-export const greetingsRouter = Router();
+export const recipesRouter = Router();
 
-greetingsRouter.get('/recipes', async (_, res) => {
+recipesRouter.get('/recipes', async (_, res) => {
   const repo = inject(RECIPES_REPOSITORY_TOKEN);
 
   const body: RecipesResponseDto = {
