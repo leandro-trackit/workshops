@@ -11,7 +11,7 @@ describe(recipesRouter.name, () => {
     const response = await client.get('/recipes');
 
     expect(response.statusCode).toBe(200);
-    expect(response.body.items).toContainEqual(
+    expect(response.body.recipes).toContainEqual(
       expect.objectContaining({
         name: "Creamy Tomato Basil Pasta",
       })
